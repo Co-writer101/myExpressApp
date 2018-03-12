@@ -1,6 +1,10 @@
 module.exports = (app) => {
     app.get('/public', (req, res) => {
-        res.send("It's public route")
+        let text = "It's public route. "
+
+        if (res.locals.user)
+            text += res.locals.user + " your ID."
+        res.send(text)
         console.log(" public route is called")
     })
 }
