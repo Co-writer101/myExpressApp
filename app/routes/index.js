@@ -1,8 +1,8 @@
-const rootRoutes = require('./root/root_routes');
-const privateRoutes = require('./private/private_routes');
-const publicRoutes = require('./public/public_routes');
+const rootRoutes = require('./root_routes');
+const privateRoutes = require('./private_routes');
+const publicRoutes = require('./public_routes');
 
-module.exports = function(app) {
+module.exports = (app) => {
     rootRoutes(app);
     privateRoutes(app);
     publicRoutes(app);

@@ -1,4 +1,4 @@
-module.exports = function(app) {
+module.exports = (app) => {
     app.get('/private', (req, res) => {
         res.send("It's private route")
         console.log(" private route is called")
