@@ -3,7 +3,7 @@ module.exports = (app) => {
     let text = 'It\'s root route. '
 
     if (res.locals.user)
-      text += `$(res.locals.user) your ID.`
+      text += `${res.locals.user} your ID.`
     res.send(text)
   })
 }

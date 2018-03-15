@@ -19,4 +19,4 @@ app.use('/private', middlewares.gruntAccessbyID);
 require('./app/routes')(app);
 
 // Run App
-app.listen(port, () => console.log('App listening on port 3000!'));
+app.listen(port, () => global.console.log('App listening on port 3000!'));
