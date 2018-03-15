@@ -20,6 +20,19 @@
   "homepage": "https://github.com/Co-writer101/myExpressApp#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "mongodb": "^3.0.4",
     "nodemon": "^1.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ]
   }
 }

@@ -1,19 +1,22 @@
-const express = require("express")
-const app = express()
-const middlewares = require("./app/middlewares")
-const port = 3000
+const express = require('express');
 
-app.disable("x-powered-by");
+const app = express();
+
+const middlewares = require('./app/middlewares');
+
+const port = 3000;
+
+app.disable('x-powered-by');
 
 app.use(
-    middlewares.logger,
-    middlewares.getIDfromURL
+  middlewares.logger,
+  middlewares.getIDfromURL,
 );
 
-app.use("/private", middlewares.gruntAccessbyID);
+app.use('/private', middlewares.gruntAccessbyID);
 
 // Load routers
-require("./app/routes")(app);
+require('./app/routes')(app);
 
 // Run App
-app.listen(port, () => console.log("App listening on port 3000!"))
+app.listen(port, () => console.log('App listening on port 3000!'));
